@@ -46,7 +46,7 @@ leash
 1
 5010
 deck
-Tração Total
+TraÃ§Ã£o Total
 145.00
 1
 5011
