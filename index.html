@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Sistema de Estoque - Surf Shop: Main Page</title>
+<title>Sistema de Estoque - Surf Shop: Sistema de Estoque - Surf Shop 🌊</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,10 +68,38 @@ $(function() {
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Sistema de Estoque - Surf Shop Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Sistema de Estoque - Surf Shop 🌊 </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a> <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&amp;logo=c&amp;logoColor=white" alt="C" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/Status-Concluido-brightgreen?style=for-the-badge" alt="Status" class="inline"/></p>
+<p>Sistema desenvolvido como trabalho final da disciplina de Estruturas de Dados. O projeto simula o gerenciamento de estoque e vendas de uma loja de surf, controlando itens como <b>Parafina, Leash, Quilha e Deck</b>.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+🚀 Estruturas de Dados Aplicadas</h1>
+<p>O diferencial deste projeto é a aplicação prática de múltiplos conceitos de alocação dinâmica e ponteiros:</p><ul>
+<li><b>Lista Duplamente Encadeada:</b> Gerencia o catálogo de produtos à venda, mantendo os itens automaticamente ordenados por preço.</li>
+<li><b>Pilha (Stack):</b> Simula o estoque físico. Os itens são armazenados em caixas empilhadas. Cada tipo de produto tem uma capacidade máxima por caixa (ex: 50 parafinas por caixa, 5 decks por caixa). Quando uma caixa enche, uma nova é empilhada por cima.</li>
+<li><b>Fila (Queue):</b> Gerencia a logística de entrega. Após a venda, os dados do cliente e do produto entram em uma fila para confirmação de saída.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+🛠️ Arquitetura do Código</h1>
+<ul>
+<li><code><a class="el" href="DefStructs_8h_source.html">DefStructs.h</a></code> / <code><a class="el" href="defstructs_8c.html" title="Instanciação das variáveis globais de controle das estruturas de dados.">defstructs.c</a></code>: Estruturas dos nós (Listas, Pilhas, Filas).</li>
+<li><code><a class="el" href="DefConst_8h.html" title="Definição das constantes globais, capacidades e categorias do sistema.">DefConst.h</a></code> / <code><a class="el" href="DefConst_8c.html" title="Inicialização das constantes globais do sistema.">DefConst.c</a></code>: Constantes globais e limites de capacidade.</li>
+<li><code><a class="el" href="FunctionsMenu_8h_source.html">FunctionsMenu.h</a></code> / <code><a class="el" href="FunctionsMenu_8c.html" title="Implementação das regras de negócio, manipulação de ponteiros e menus.">FunctionsMenu.c</a></code>: Lógica de ordenação, venda, liberação de memória (<code>free</code>) e interface do terminal.</li>
+<li><code><a class="el" href="main_8c.html" title="Ponto de entrada do Sistema de Estoque da Surf Shop.">main.c</a></code>: Loop principal e menus interativos.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+⚙️ Como compilar e executar</h1>
+<p>Certifique-se de ter o compilador <b>GCC</b> instalado no seu ambiente.</p>
+<p><b>1. Compilando o projeto:</b> ```bash gcc src/*.c -I include -o surf_shop </p>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Para testar a inserção em massa de produtos:</h1>
+<p>./surf_shop &lt; inserir_produtos.txt</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Para testar o fluxo de vendas e entregas:</h1>
+<p>./surf_shop &lt; revenda_entregas.txt </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
