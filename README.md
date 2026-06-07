@@ -18,3 +18,16 @@ O diferencial deste projeto é a aplicação prática de múltiplos conceitos de
 - `DefConst.h` / `DefConst.c`: Constantes globais e limites de capacidade.
 - `FunctionsMenu.h` / `FunctionsMenu.c`: Lógica de ordenação, venda, liberação de memória (`free`) e interface do terminal.
 - `main.c`: Loop principal e menus interativos.
+
+## ⚙️ Como compilar e executar
+
+Certifique-se de ter o compilador **GCC** instalado no seu ambiente. 
+
+**1. Compilando o projeto:**
+```bash
+gcc main.c defstructs.c DefConst.c FunctionsMenu.c -o surf_shop
+# Para testar a inserção em massa de produtos:
+./surf_shop < inserir_produtos.txt
+
+# Para testar o fluxo de vendas e entregas:
+./surf_shop < revenda_entregas.txt
