@@ -1,15 +1,12 @@
-# Nome do seu projeto
 PROJECT_NAME           = "Sistema de Estoque - Surf Shop"
 
-# Onde o Doxygen deve procurar os arquivos .c e .h
 INPUT                  = src include
 
-# Dizer para ele ler as pastas internamente
 RECURSIVE              = YES
 
-# Gerar o site em HTML
 GENERATE_HTML          = YES
 HTML_OUTPUT            = html
 
-# Desativar a geração de PDF/Latex (para ser mais rápido e leve)
 GENERATE_LATEX         = NO
+USE_MDFILE_AS_MAINPAGE = README.md
+INPUT += README.md
