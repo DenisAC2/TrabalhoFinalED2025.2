@@ -1,3 +1,7 @@
+/**
+ * @file FunctionsMenu.c
+ * @brief Implementação das regras de negócio, manipulação de ponteiros e menus.
+ */
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
@@ -50,6 +54,12 @@ int InsercaoString(char* destino, int TamBuffer) {
     else return 1;
 }
 
+/**
+ * @brief Função interna (privada) para comparar strings ignorando maiúsculas e minúsculas.
+ * @param a Primeira string.
+ * @param b Segunda string.
+ * @return true se forem iguais, false caso contrário.
+ */
 static bool StringsCaseInsensitive(const char* a, const char* b) {
     if (a == NULL || b == NULL) return false;
     while (*a != '\0' && *b != '\0') {

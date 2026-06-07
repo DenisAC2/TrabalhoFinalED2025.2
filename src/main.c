@@ -1,3 +1,11 @@
+/**
+ * @file main.c
+ * @author Denis
+ * @brief Ponto de entrada do Sistema de Estoque da Surf Shop.
+ * * Este arquivo contém o loop principal do programa, gerenciando a interface 
+ * de terminal interativa e roteando as escolhas do usuário para as funções 
+ * adequadas de manipulação das estruturas de dados.
+ */
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>

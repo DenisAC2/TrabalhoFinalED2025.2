@@ -1,0 +1,29 @@
+name: Gerar Documentacao Doxygen
+
+# O robô vai rodar toda vez que você fizer um 'git push' na branch master
+on:
+  push:
+    branches: [ "master" ]
+
+# Permissão necessária para o robô criar o site
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Pegar o código do repositório
+        uses: actions/checkout@v4
+
+      - name: 2. Instalar o Doxygen no servidor do GitHub
+        run: sudo apt-get update && sudo apt-get install -y doxygen
+
+      - name: 3. Ler o Doxyfile e gerar o site HTML
+        run: doxygen Doxyfile
+
+      - name: 4. Publicar o site no GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./html # A pasta que o Doxygen gerou
