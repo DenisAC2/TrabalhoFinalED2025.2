@@ -25,7 +25,7 @@ Certifique-se de ter o compilador **GCC** instalado no seu ambiente.
 
 **1. Compilando o projeto:**
 ```bash
-gcc main.c defstructs.c DefConst.c FunctionsMenu.c -o surf_shop
+gcc src/*.c -I include -o surf_shop
 # Para testar a inserção em massa de produtos:
 ./surf_shop < inserir_produtos.txt
 
